@@ -3,13 +3,13 @@
 describe ('writeFile and readFile', () =>{
 
     it('TC001-writeFile', () => {
-        cy.writeFile('basitNotDefteri.txt','Merhaba Dünya\n');
-        cy.writeFile('basitNotDefteri.txt','Cypress Dersine Hoş Geldiniz',{flag:'a+'});
+        cy.writeFile('basicNotePad.txt','Hello World\n');
+        cy.writeFile('basicNotePad.txt','Welcome to Cypress Lesson',{flag:'a+'});
        
     })
     it('TC002-readFile', () => {
-        cy.readFile('basitNotDefteri.txt').then((text) => {
-            expect(text).to.contain('Merhaba')
+        cy.readFile('basicNotePad.txt').then((text) => {
+            expect(text).to.contain('Hello')
         })
        
     })
